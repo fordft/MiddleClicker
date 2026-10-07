@@ -1,0 +1,11 @@
+.DS_Store
+.build/
+dist/
+.venv/
+__pycache__/
+*.pyc
+*.dmg
+*.zip
+*.p12
+*.p8
+.env

@@ -1,0 +1,43 @@
+MIDDLECLICKER — FREE AND OPEN SOURCE
+https://github.com/fordft/MiddleClicker
+MIT License
+
+INSTALL
+1. Open this disk image and drag MiddleClicker.app into Applications.
+2. Open MiddleClicker from Applications once.
+3. Allow MiddleClicker in System Settings > Privacy & Security > Accessibility.
+4. Allow MiddleClicker in Privacy & Security > Input Monitoring.
+   If macOS asks, choose Quit & Reopen. Reopen the app if it does not reopen itself.
+
+Launch at Login is enabled automatically when first opened from Applications.
+The MC + mouse icon in the menu bar shows the app is running.
+
+USE
+Hold Fn (Globe) and click or tap with the left button to send a middle click.
+Hold Fn, click, and drag to use middle-button navigation in Blender, Maya,
+CAD applications, and other apps. Shift, Control, Option, Command, mouse
+movement, click count, and pressure are preserved. Releasing Fn early keeps
+the middle-button gesture active until you release the click.
+
+Select Test Middle Click from the menu for an interactive check.
+The menu also lets you pause the app, change Launch at Login, open permission
+settings, and quit. Pending middle-button gestures are released when paused,
+on normal quit, before sleep, and when a mouse event tap is interrupted.
+
+SECURITY NOTICE
+This release is ad hoc signed and is not Developer ID notarized. macOS may
+require System Settings > Privacy & Security > Open Anyway on first launch.
+Apple's instructions: https://support.apple.com/guide/mac-help/mh40616/mac
+
+REQUIREMENTS AND PRIVACY
+macOS 13 or later. Universal app for Apple Silicon and Intel.
+A keyboard that reports the Apple Fn/Globe key is required. Enable tap-to-click
+in macOS Trackpad settings if you want to use Fn + Tap.
+The app only remaps left-click gestures and reads physical Fn values.
+No typed text, audio, screen content, or input history is collected.
+There is no background network connection, account, or subscription.
+
+UPGRADE OR REMOVE
+Quit the old version before replacing it in Applications. macOS may require
+permission approval again after an ad hoc signed update.
+To remove, turn off Launch at Login, quit MiddleClicker, and move it to Trash.

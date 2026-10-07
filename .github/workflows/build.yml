@@ -1,0 +1,36 @@
+name: Build and test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Test middle-click behavior
+        run: python3 scripts/test.py
+      - name: Build universal app
+        run: python3 scripts/build.py
+      - name: Install packaging dependencies
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install -r scripts/requirements-build.txt
+      - name: Package DMG and ZIP
+        run: .venv/bin/python scripts/package_release.py
+      - name: Verify downloadable packages
+        run: python3 scripts/verify_release.py
+      - uses: actions/upload-artifact@v7
+        with:
+          name: MiddleClicker-universal
+          path: |
+            dist/*.dmg
+            dist/*.zip
+            dist/SHA256SUMS.txt
+          retention-days: 14
